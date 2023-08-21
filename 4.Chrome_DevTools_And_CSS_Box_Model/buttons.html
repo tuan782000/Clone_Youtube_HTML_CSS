@@ -1,0 +1,65 @@
+<style>
+    .sub-btn {
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none;
+        /* Lý do thẻ button dùng được height là do mặc định nó là inline-block */
+        /* height: 36px;
+        width: 105px; */
+        padding: 10px 15px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-right: 8px;
+        margin-left: 20px;
+        transition: opacity 0.15s; /*Chuyển động, mượt mà,...*/
+        vertical-align: top;
+    }
+    /* Hover là một trong các pseudo-class */
+    .sub-btn:hover {
+        opacity: 0.8; /* độ mờ càng nhỏ càng mờ */
+    }
+    .sub-btn:active {
+        opacity: 0.5; /* độ mờ */
+    }
+    .join-btn {
+        background-color: white;
+        border-color: rgb(6, 95, 212);
+        border-style: solid;
+        border-width: 1px;
+        color: rgb(6, 95, 212);
+        /* height: 36px;
+        width: 62px; */
+        padding: 9px 16px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: background-color 1s, color 1s;
+    }
+    .join-btn:hover {
+        background-color: rgb(6, 95, 212);
+        color: white;
+    }
+    .join-btn:active {
+        opacity: 0.7;
+    }
+    .tweet-btn {
+        background-color: rgb(29, 155, 249);
+        color: white;
+        border: 1px solid rgb(2, 137, 255);
+        height: 36px;
+        width: 70px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        transition: box-shadow 0.15s;
+        vertical-align: top;
+    }
+    .tweet-btn:hover {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        /* bóng , tham số thứ 1 x tham số thứ 2 y tham số thứ 3 độ mờ, tham số thứ 4 màu */
+    }
+</style>
+<button class="sub-btn">SUBSCRIBE</button>
+<button class="join-btn">JOIN</button>
+<button class="tweet-btn">Tweet</button>

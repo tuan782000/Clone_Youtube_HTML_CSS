@@ -1,0 +1,252 @@
+/* .search-bar {
+    font-size: 20px;
+    display: block;
+} */
+
+.header {
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Lý do ở đây không dùng bottom là vì có height rồi */
+
+    background-color: white;
+
+    /* tạo 1 viền chân */
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    height: 20px;
+}
+
+.middile-section {
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    /* chiều rộng đạt rối đa là 300px không vượt hơn */
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05); /*bóng ngược vào trong*/
+    width: 0; /*để kích hoạt shrink = 0 thay đổi về width 0 được xem lại youtube 4:44:17*/
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-button {
+    height: 40px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notifications-icon-container {
+    /* canh cho chữ luôn luôn giữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+
+    /* Tránh trường hợp chưa hover vào đã mở toottip lên ngay chỗ vị trí hiển thì tooltip */
+    pointer-events: none;
+    /* khoảng trắng không xuống hàng */
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+.right-section {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+    flex-shrink: 0; /* giữ nguyên các đơn vị của class này không bị tác động khi giao diện bị co giản */
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.youtube-apps-icon {
+    height: 24px;
+}
+
+.notifications-icon {
+    height: 24px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.current-user-picture {
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+    .hamburger-menu {
+        height: 12px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .youtube-logo {
+        height: 10px;
+    }
+    .search-bar {
+        height: 12px;
+        font-size: 8px;
+        padding-left: 5px;
+        border: 0.5px solid rgb(192, 192, 192);
+    }
+    .search-bar::placeholder {
+        font-size: 8px;
+    }
+    .middile-section .search-button {
+        border: none;
+        border-radius: 0 16px 16px 0;
+    }
+    .upload-icon {
+        height: 12px;
+        margin-right: 5px;
+    }
+    
+    .youtube-apps-icon {
+        height: 12px;
+        margin-right: 5px;
+    }
+    
+    .notifications-icon {
+        height: 12px;
+        margin-right: 5px;
+    }
+    .notification-count {
+        font-size: 5px;
+        padding: 1px 3px;
+        top: -2px;
+        right: 2px;
+    }
+    .search-button {
+        height: 15px;
+        width: 20px;
+        border: 0.5px solid rgb(192, 192, 192);
+        margin-left: -2px;
+        margin-right: 10px;
+    }
+    .voice-search-icon {
+        height: 12px;
+    }
+    .voice-search-button {
+        width: 20px;
+        height: 20px;
+    }
+    .search-icon {
+        height: 12px;
+    }
+    .current-user-picture {
+        height: 16px;
+        margin-right: 10px;
+    }
+    .right-section {
+        justify-content: end;
+    }
+    .middile-section {
+        margin: 0;
+        margin-left: 15px;
+        /* chiều rộng đạt rối đa là 300px không vượt hơn */
+
+    }
+}
+

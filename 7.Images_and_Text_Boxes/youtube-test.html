@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Youtube.com Clone</title>
+        <style>
+            /* .thumbnail {
+                width: 300px;
+                height: 300px;
+                object-fit: contain;
+                object-position: top;
+                border: 2px solid red;
+            } */
+            .thumbnail {
+                width: 300px;
+                height: 300px;
+                object-fit: contain; /*nếu mà ảnh bị with height bóp biến dạng thì nên dùng thuộc tính này để cân bằng*/
+                object-position: bottom; /* Muốn điều chỉnh phần nào của hình ảnh, cụ thể ở bên phải */
+                border: 2px solid red;
+            }
+
+            /* Cặp object-fit: contain;
+                object-position: bottom;
+                /*nếu mà ảnh bị with height bóp biến dạng thì nên dùng thuộc tính này để cân bằng*/
+                /* Muốn điều chỉnh phần nào của hình ảnh, cụ thể ở bên phải */ 
+                
+        </style>
+    </head>
+    <body>
+        <img class="thumbnail" src="thumnails/ted.png" alt="ted" />
+    </body>
+</html>

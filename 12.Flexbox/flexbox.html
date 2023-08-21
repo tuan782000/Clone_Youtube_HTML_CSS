@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox Practice</title>
+    </head>
+    <body style="padding-bottom: 1000px;">
+        <div style="display: flex; flex-direction: row">
+            <div style="background-color: lightblue">div 1</div>
+            <div style="background-color: lightpink">
+                div 2
+                <p>text</p>
+            </div>
+        </div>
+        <div style="margin-top: 30px; display: flex; flex-direction: row">
+            <div style="background-color: lightblue; width: 100px">100px</div>
+            <div style="background-color: lightpink; flex: 1">Flex 1</div>
+            <!-- flex 1 tương đương 1fr  grid -->
+        </div>
+        
+        <div style="margin-top: 30px; display: flex; flex-direction: row">
+            <div style="background-color: lightblue; flex: 1">Flex 1</div>
+            <div style="background-color: lightpink; width: 100px">100px</div>
+            <!-- flex: 1 tự co bóp theo tỷ lệ và tương đường flex: 2 cũng vậy nó tương 1fr hoặc 2fr -->
+            <div style="background-color: lightblue; flex: 2;">Flex 2</div>
+        </div>
+       
+        <!-- Giới thiệu justify-content: center; căn chỉnh theo chiều ngang-->
+        <div 
+            style="
+                margin-top: 30px; 
+                height: 70px;
+                border: 1px solid gray;
+                
+                display: flex; 
+                flex-direction: row;
+                justify-content: center;
+            "
+        >
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px">100px</div>
+            <!-- flex: 1 tự co bóp theo tỷ lệ và tương đường flex: 2 cũng vậy nó tương 1fr hoặc 2fr -->
+            <div style="background-color: lightblue; width:100px;">100px</div>
+        </div>
+
+       <!-- Giới thiệu justify-content: space-between; căn chỉnh theo chiều ngang-->
+       <!-- còn các thuộc tính căn chỉnh theo chiều ngang khác, tìm hiểu thêm start end,.. -->
+        <div 
+            style="
+                margin-top: 30px; 
+                height: 70px;
+                border: 1px solid gray;
+                
+                display: flex; 
+                flex-direction: row;
+                justify-content: space-between;
+            "
+        >
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px">100px</div>
+            <!-- flex: 1 tự co bóp theo tỷ lệ và tương đường flex: 2 cũng vậy nó tương 1fr hoặc 2fr -->
+            <div style="background-color: lightblue; width:100px;">100px</div>
+        </div>
+        
+        <!-- Giới thiệu align-items; stretch; căn chỉnh theo chiều dọc, 
+            cụ thể ở đây stretch căn theo chiều dọc và kéo dài lắp đầy không gian chiều dọc đấy. 
+            
+            Ngoài ra có thể tùy biến "start" chúng sẽ không còn kéo dài đến không gian thẳng đứng. Chiều đi từ trên xuống nha
+            Có thể tùy biến "end" vị trí bắt đầu ở cuối và hướng đi lên
+            Có thể tùy biến "center" vị trí bắt đầu ở giữa và hướng lắp đầy đều ra theo 2 hướng trên dưới.
+            
+        -->
+        <div 
+            style="
+                margin-top: 30px; 
+                height: 70px;
+                border: 1px solid gray;
+                
+                display: flex; 
+                flex-direction: row;
+                justify-content: space-between;
+            "
+        >
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px">100px</div>
+            <!-- flex: 1 tự co bóp theo tỷ lệ và tương đường flex: 2 cũng vậy nó tương 1fr hoặc 2fr -->
+            <div style="background-color: lightblue; width:100px;">100px</div>
+        </div>
+    </body>
+</html>

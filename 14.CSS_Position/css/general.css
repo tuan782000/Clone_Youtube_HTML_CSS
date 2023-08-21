@@ -1,0 +1,17 @@
+p {
+    font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 0;
+    padding: o;
+
+    /* tại sao dùng padding vì body nó đâu có margin từ body này body khác */
+    /* cách ra khoảng ít nhất là 60px để phục vụ cho navabar */
+    /* ở đây dùng 80px nhìn đẹp hơn trong trường hợp này */
+    padding-top: 80px;
+    /* dùng padding-left phục vụ cho sidebar */
+    padding-left: 80px;
+}

@@ -1,0 +1,31 @@
+/* .search-bar {
+    font-size: 20px;
+    display: block;
+} */
+
+.header {
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-section {
+    background-color: lightblue;
+    width: 150px;
+}
+
+.middile-section {
+    background-color: lightpink;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    /* chiều rộng đạt rối đa là 300px không vượt hơn */
+    max-width: 500px;
+}
+
+.right-section {
+    background-color: lightblue;
+    width: 200px;
+}
